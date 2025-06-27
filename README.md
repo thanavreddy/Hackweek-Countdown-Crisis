@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Issues Fixed 
 
-## Getting Started
+## Data null issue 
+the src/app/components/CommunityInfo.js had issue where the state variable and the variable used to store fetched data had the same name 'data'
+i fixed that in the following way
+![image](https://github.com/user-attachments/assets/41e5d8d1-4609-4880-8289-b16cdfb51bd7)
+Note:the console.log('data') and console.log(data) were written for debugging purpose and can be safely removed 
 
-First, run the development server:
+## Diffrent date on which hackweek ends
+the src/app/components/Countdown.js had the end date as 29th of june but actually the hackweek ends on 28th of june, the below changes were made by me
+![image](https://github.com/user-attachments/assets/948b0924-54ce-4135-b4d3-33b04f73975d)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Minor dev issue solved
+Hydration errors occur when there's a mismatch between the HTML generated on the server and what React expects to render on the client during the reconciliation process
+i used suppressHydrationWarning,check the image given below
+![image](https://github.com/user-attachments/assets/450b037b-d3aa-4eff-9293-b3eada260269)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Site after solving issues
+![image](https://github.com/user-attachments/assets/88cab238-866c-44a5-b0b0-36bbe1ccfe79)
