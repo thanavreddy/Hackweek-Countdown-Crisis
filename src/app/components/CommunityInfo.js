@@ -6,13 +6,19 @@ export default function CommunityInfo() {
   useEffect(() => {
     const fetchMessage = async () => {
       const res = await fetch('/cosc.json');
-      const data = await res.json();
-      setData(data);
+      const jsonData = await res.json();
+      setData(jsonData);
     };
 
     fetchMessage();
   }, []);
-
+console.log('data')
+  console.log(data)
+  
+  if (!data) {
+    return <div>Loading...</div>;
+  }
+  
   return (
     <div className="text-center mb-6">
       <h1 className="text-4xl font-bold text-gray-800 mb-4">{data.name}</h1>
